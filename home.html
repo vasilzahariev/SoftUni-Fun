@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoftUni Fun</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="webdesing">
+<nav>
+    <ul type="none">
+        <li>
+            <a href="https://www.softunifun.free.bg"><i class="glyphicon glyphicon-home"> Home</i></a>
+        </li>
+        <li>
+            <a href="https://www.softunifun.free.bg"><i class="glyphicon glyphicon-picture"> Photos</i></a>
+        </li>
+        <li>
+            <a href=""><i class="glyphicon glyphicon-comment"> Jokes</i></a>
+        </li>
+        <li>
+            <a href=""><i class="glyphicon glyphicon-education"> About SoftUni</i></a>
+        </li>
+        <li>
+            <a href=""> <i class="glyphicon glyphicon-info-sign"> Information</i></a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Welcome to <a href="https://www.softunifun.free.bg">www.softunifun.free.bg</a></h1>
+</header>
+<main>
+    <div class="lastupload">
+        <h2>The last upload photo:</h2>
+        <img id="myImg" src="superhero.jpg" alt="Super Hero Meme" width="300" height="200">
+        <div id="myModal" class="modal">
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <script>
+            var modal = document.getElementById('myModal');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById('myImg');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+        <h2>The last upload Joke:</h2>
+        <p>
+            Дъщepя питa мaйĸa cи (пpoгpaмиcтĸa): <br>
+            – Maмo, зaщo ниe жeнитe имaмe "ĸpитични дни"?<br>
+            – Гocпoд тaĸa e нaпpaвил. (пpoгpaмиcтĸa, aмa peлигиoзнa…)<br>
+            – A зaщo?<br>
+            – Oтишлa Eвa пpи нeгo и ĸaзaлa – "Бoжe, нaпpaви тaĸa чe дa мoжeм дa пpaвим ceĸc c Aдaм". A Гocпoд пoпитaл – "Kaĸвo e тoвa ceĸc". "Aми ĸaĸ дa ти oбяcня – вĸapвaш гo и зaпoчвaш дa cи игpaeш".<br>
+            И тaĸa, Бoг нaпpaвил жeнaтa пo тexнoлoгиятa "Рlug аnd Рlау".<br>
+            – A ĸaĸвo oбщo имa тyĸ мeceчният циĸъл?<br>
+            – E, ти виждaлa ли cи "Рlug аnd Рlау" бeз бъгoвe?<br>
+        </p>
+    </div>
+</main>
+</div>
+<footer>
+    <p>&copy; 2017 By: Vasil Zahariev</p>
+</footer>
+</body>
+</html>
